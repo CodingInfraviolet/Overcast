@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ABA82B08-9E7B-41BB-80C3-731B68FA9085}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Overcast</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IntDir>$(SolutionDir)BuildFiles\Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IntDir>$(SolutionDir)BuildFiles\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NOVIRTUALKEYCODES;NOMCX;NODEFERWINDOWPOS;NONLS;NOPROFILER;NOHELP;NOKANJI;NOCOMM;NOWINOFFSETS;NOWH;NOTEXTMETRIC;NOSOUND;NOSERVICE;NOSCROLL;NOOPENPROFILE;NOMINMAX;NOMETAFILE;NOKERNEL;NDEBUG;_DEBUG;_CONSOLE;_PROFILE;%(PreprocessorDefinitions);BOOST_FILESYSTEM_NO_DEPRECATED</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ThirdPartyCxx\freetype-2.5.4\include;C://ThirdPartyCxx\SOIL\Simple OpenGL Image Library\src;$(SolutionDir)/source;C://ThirdPartyCxx\glew-1.10.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BrowseInformation>true</BrowseInformation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\ThirdPartyCxx\freetype-2.5.4\objs\vc2010\Win32;C://ThirdPartyCxx\glew-1.10.0\lib\Debug\Win32;C://ThirdPartyCxx\SOIL\Simple OpenGL Image Library\projects\VC9\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32sd.lib;glew32d.lib;SOIL.lib;freetype254d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NOVIRTUALKEYCODES;NOMCX;NODEFERWINDOWPOS;NONLS;NOPROFILER;NOHELP;NOKANJI;NOCOMM;NOWINOFFSETS;NOWH;NOTEXTMETRIC;NOSOUND;NOSERVICE;NOSCROLL;NOOPENPROFILE;NOMINMAX;NOMETAFILE;NOKERNEL;NDEBUG;_CONSOLE;_HAS_ITERATOR_DEBUGGING=0;_SECURE_SCL=0;%(PreprocessorDefinitions);BOOST_FILESYSTEM_NO_DEPRECATED</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ThirdPartyCxx\freetype-2.5.4\include;C://ThirdPartyCxx\SOIL\Simple OpenGL Image Library\src;$(SolutionDir)/source;C://ThirdPartyCxx\glew-1.10.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\ThirdPartyCxx\freetype-2.5.4\objs\vc2010\Win32;C://ThirdPartyCxx\glew-1.10.0\lib\Release\Win32;C://ThirdPartyCxx\SOIL\Simple OpenGL Image Library\projects\VC9\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32s.lib;glew32.lib;SOIL.lib;freetype254.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="drawable.cpp" />
+    <ClCompile Include="gbuffer.cpp" />
+    <ClCompile Include="guitext.cpp" />
+    <ClCompile Include="InitialiseOpenGL.cpp" />
+    <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="Error.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="graphicsinterface.cpp" />
+    <ClCompile Include="iniparser.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="light.cpp" />
+    <ClCompile Include="main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="mathdrak.cpp" />
+    <ClCompile Include="matrixd.cpp" />
+    <ClCompile Include="movable.cpp" />
+    <ClCompile Include="OpenGLClass.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="rand.cpp" />
+    <ClCompile Include="SettingClasses.cpp" />
+    <ClCompile Include="settings.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
+    <ClCompile Include="shadowbuffer.cpp" />
+    <ClCompile Include="sky.cpp" />
+    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="staticmesh.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="tinymt32.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="transformable.cpp" />
+    <ClCompile Include="util.cpp" />
+    <ClCompile Include="Vertex.cpp" />
+    <ClCompile Include="world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="drawable.h" />
+    <ClInclude Include="enums.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="gbuffer.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="graphicsinterface.h" />
+    <ClInclude Include="guitext.h" />
+    <ClInclude Include="iniparser.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="mathdrak.h" />
+    <ClInclude Include="matrixd.h" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="miscUtilFunction.h" />
+    <ClInclude Include="movable.h" />
+    <ClInclude Include="OpenGLClass.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="quaternion.h" />
+    <ClInclude Include="rand.h" />
+    <ClInclude Include="RenderList.h" />
+    <ClInclude Include="SettingClasses.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="shadowbuffer.h" />
+    <ClInclude Include="sky.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="staticmesh.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="tinymt32.h" />
+    <ClInclude Include="transformable.h" />
+    <ClInclude Include="typedefs.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="vmfheader.h" />
+    <ClInclude Include="world.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ObjectConversions\ObjectConversions.vcxproj">
+      <Project>{48aa336f-103a-4f15-8e70-3c6b08738aec}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
